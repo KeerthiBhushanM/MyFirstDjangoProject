@@ -1,0 +1,113 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ACM Webdev Assignment</title>
+
+  <style>
+    div{padding-left:300px;
+        padding-right:300px;
+        padding-top: 30px;}
+    p {color: navy;
+       text-indent: 30px;
+       text-transform: uppercase;}
+    h4 {background-color:rgba(140, 149, 190, 0.679);
+        font-family:courier;}
+    table,th,td{border:1px solid black; border-collapse: collapse;}
+  </style>
+
+</head>
+
+
+
+<body style="background-image:url('https://source.unsplash.com/user/erondu/1600x900');">
+    <div>
+    <header><h1 id="main" style="background-color:rgb(221, 220, 146);">NAME:   KEERTHI BHUSHAN M </h1><br>
+    <img align="right" src="https://images.unsplash.com/profile-1446404465118-3a53b909cc82?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128&s=27a346c2362207494baa7b76f5d606e5" alt="Profile Picture">
+    <h4> Education :-
+    <ol>
+      <li>RNS Vidyaniketan (class 1-5)</li>
+      <li>Narayana e-Techno School (class 6-7)</li>
+      <li>SJR Kengeri Public School (class 8-10)</li>
+      <li>ASC Independent PU College (class 11-12)</li>
+      <li>National Institute of Technolgy Karnataka, Surathkal (BTech in ECE, expected 2025)</li>
+    </ol></h4> <br><br>
+    
+    <div id="div-1" style="padding-left:0px; padding-right:0px; padding-top: 0px;">
+    <h4>
+        <table >
+        <tr>
+            <th>AGE</th>
+            <th>GENDER</th>
+            <th>CITY</th>
+            <th>ORGANIZATIONS</th>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Male</td>
+            <td>Bangalore</td>
+            <td><ul><li>Department of Electronics and Communication Engineering, NIT Karnataka</li><li>IRIS Web Developer</li><li>ACM Executive Member(currently active in publicity team)</li></ul></td>
+        </tr>
+        </table>
+    </h4>
+    </div>
+    <h4>
+        <p id="kb">Thank you for viewing this profile, kindly enter your email id so that i can get in contact with you
+        <br>Name: <input type="email" name="MyEMail"> <input type="submit" Submit><br>
+        <button id="name" onclick="changeName()"> Change Name </button>
+        <button id="xyz" onclick="deleteTable()"> Delete Table</button></p>
+    </h4>
+
+    <h4>
+        <div id="div2" style="padding-left:0px; padding-right:0px; padding-top: 0px;">
+            <p id="old">
+                Click here to know the sponsorors: <button id="abc" onclick="changePara()">Click here</button>
+            </p>
+        </div>
+    </h4>
+        <script>
+            const men = document.getElementById("kb");
+    
+            men.onmouseover = function() {
+                men.style.color = "red";
+            }
+            men.onmouseout = function() {
+                men.style.color = "navy";
+            }
+            const main = document.getElementById("main");
+            function changeName(){
+                main.innerHTML="NAME: ELON MUSK";
+    
+            }
+
+            function changePara(){
+                const newPara = document.createElement("p");
+                const newText = document.createTextNode("ADVERTISEMENT: This website is sponsored by no_one_sponsors_me_bro.com   #sedlife");
+                newPara.appendChild(newText);
+                const parentDiv = document.getElementById("div2");
+                const oldPara = document.getElementById("old");
+                parentDiv.replaceChild( newPara, oldPara);
+            }
+
+            function deleteTable() {
+                const elmnt = document.getElementById("div-1");
+                elmnt.remove();
+            }
+
+            
+          
+            </script>
+
+            <br>
+<center>
+<footer>
+    <h4>THE CURRENT PAGE IS SUBJECTED TO COPYRIGHT      ©keerthibhushan.com, Inc</h4>
+</footer>
+</center>
+</div>
+
+</body>
+</html>
